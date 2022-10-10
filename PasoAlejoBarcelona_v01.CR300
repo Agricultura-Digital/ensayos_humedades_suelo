@@ -96,7 +96,7 @@ Units ts_t4_60_b=Deg C
 
 '--------TABLAS--------
 'Humedades de suelo
-DataTable(HumSuel_PasoAlejoBar,True,-1)
+DataTable(a_HumSuel_pAlejoBar,True,-1)
 	DataInterval(0,60,Min,10)
 	Sample(1,hs_t1_20_b,FP2,False)
 	Sample(1,hs_t1_40_b,FP2,False)
@@ -112,7 +112,7 @@ DataTable(HumSuel_PasoAlejoBar,True,-1)
 	Sample(1,hs_t4_60_b,FP2,False)
 EndTable
 'Temperaturas de suelo
-DataTable(Temp_PasoAlejoBar,True,-1)
+DataTable(b_Temp_pAlejoBar,True,-1)
 	DataInterval(0,60,Min,10)
 	Average(1,ts_t3_20_b,FP2,False)
 	Average(1,ts_t3_40_b,FP2,False)
@@ -122,7 +122,7 @@ DataTable(Temp_PasoAlejoBar,True,-1)
 	Average(1,ts_t4_60_b,FP2,False)
 EndTable
 'Voltajes de salida entregados por los sensores
-DataTable(mVolts_PasoAlejoBar,True,-1)
+DataTable(c_mVolts_pAlejoBar,True,-1)
 	DataInterval(0,60,Min,10)
 	Sample(1,mV_t1_20_b,FP2,False)
 	Sample(1,mV_t1_40_b,FP2,False)
@@ -139,7 +139,7 @@ DataTable(mVolts_PasoAlejoBar,True,-1)
 EndTable
 
 'Voltaje de bateria
-DataTable(Bat_PasoAlejoBar,True,-1)
+DataTable(d_Bat_pAlejoBar,True,-1)
 	DataInterval(0,1440,Min,10)
 	Maximum(1,PTemp_C,FP2,False,False)
 	Minimum(1,BattV,FP2,False,False)
@@ -228,9 +228,9 @@ BeginProg
    'Cierre de switch 12V total 900mA.
     SW12 (0)
 	 'Grabacion de tablas
-		CallTable HumSuel_PasoAlejoBar
-		CallTable Temp_PasoAlejoBar
-		CallTable mVolts_PasoAlejoBar
-		CallTable Bat_PasoAlejoBar
+		CallTable a_HumSuel_pAlejoBar
+		CallTable b_Temp_pAlejoBar
+		CallTable c_mVolts_pAlejoBar
+		CallTable d_Bat_pAlejoBar
 	NextScan
 EndProg
