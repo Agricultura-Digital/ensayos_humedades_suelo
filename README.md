@@ -45,7 +45,8 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 En el caso de tener múltiples sensores Teros11 o Teros12, se pueden configurar sus direcciones SDI12 para disponer al menos 10 por salida digital. Cuyas direcciones pueden ser configuradas desde 0 a 9. En el caso del data CR300 se disponen de 2 entradas digitales, C1 y C2, en el caso del data CR1000 se disponen de 4 entradas SDI12, C1, C3, C5 y C7.
 Para configurar la dirección SDI12 del sensor, primero hay que asegurarse que se puede conectar el data con el computador, luego se puede utilizar la aplicación Terminar Emulator (Emulador de Terminal) que en el software PC400 se encuentra en menú ***Datalogger->Terminar Emulator***. Una vez abierta la ventana de la terminal, hacer cliks sobre el botón ***Abrir la terminal***. Si todo sale bien, la terminal responderá con el modelo de datalogger, ejem:  ***CR300>***, luego se puede seguir la siguiente secuencia de comandos y respuestas, entre la terminal y el data:
 
-```C#
+
+```
 CR300> SDI12    //Consuta para configurar protocolos SDI12.
 1: C1
 2: C2
@@ -58,6 +59,8 @@ Entering SDI12 Terminal. Press ESC to exit  //Ingrese comando SDI12
 2   //Cnfirmado cambio de derección SDI12 del sensor.
 
 ```
+
+
 A continuación se muestran los comandos en el emulador de terminal del software PC400.
 
 ![Figura 1](images/img01.png)
@@ -75,9 +78,9 @@ A continuación se muestran el cableado para los sensores Teros10 y Teros11.
 
 ![Figura 2](images/img02.png)
 
-**Figura 1.** Cableado sensor Teros10. 
+**Figura 2.** Cableado sensor Teros10. 
 
 ![Figura 3](images/img03.png)
 
-**Figura 1.** Cableado sensor Teros11.
+**Figura 3.** Cableado sensor Teros11.
 
