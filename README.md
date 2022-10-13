@@ -14,37 +14,37 @@
 A continuación, se despliegan los cuadros con la información de los sensores instalados.
 
 **Tabla 1.** Estación Paso Alejo, Coihueco, en avellano europeo, variedad Barcelona. 
-|**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|
-|--|--|--|--|--|--|--|
-|T1|20|1|T10|47976|20|SE1 ???|
-|T1|40|2|T10|47977|20|SE2 ???|
-|T1|60|3|T10|45893|20|SE3 ???|
-|T2|20|1|T10|48400|10|SE4|
-|T2|40|2|T10|47979|10|SE5|
-|T2|60|3|T10|49020|10|SE6|
-|T3|20|1|T11|14624|40|C1-0|
-|T3|40|2|T11|14622|40|C1-1|
-|T3|60|3|T11|14627|40|C1-2|
-|T4|20|1|T11|20596|10|C2-0|
-|T4|40|2|T11|20530|10|C2-1|
-|T4|60|3|T11|20533|10|C2-2|
+|**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
+|--|--|--|--|--|--|--|--|
+|T1|20|1|T10|47976|20|SE1 ???|*hs_t1_20_b*|
+|T1|40|2|T10|47977|20|SE2 ???|*hs_t1_40_b*|
+|T1|60|3|T10|45893|20|SE3 ???|*hs_t1_60_b*|
+|T2|20|1|T10|48400|10|SE4|*hs_t2_20_b*|
+|T2|40|2|T10|47979|10|SE5|*hs_t2_40_b*|
+|T2|60|3|T10|49020|10|SE6|*hs_t2_60_b*|
+|T3|20|1|T11|14624|40|C1-0|*hs_t3_20_b* y *ts_t3_20_b*|
+|T3|40|2|T11|14622|40|C1-1|*hs_t3_40_b* y *ts_t3_40_b*|
+|T3|60|3|T11|14627|40|C1-2|*hs_t3_60_b* y *ts_t3_60_b*|
+|T4|20|1|T11|20596|10|C2-0|*hs_t4_20_b* y *ts_t4_20_b*|
+|T4|40|2|T11|20530|10|C2-1|*hs_t4_40_b* y *ts_t4_40_b*|
+|T4|60|3|T11|20533|10|C2-2|*hs_t4_60_b* y *ts_t4_60_b*|
 
 
 **Tabla 2.** Estación Paso Alejo, Coihueco, en avellano europeo, variedad Lewis. 
-|**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|
-|--|--|--|--|--|--|--|
-|T1|20|1|T10|33482|20|SE1|
-|T1|40|2|T10|46622|20|SE2|
-|T1|60|3|T10|46625|20|SE3|
-|T2|20|1|T11|20532|10|C1-0|
-|T2|40|2|T11|20316|10|C1-1|
-|T2|60|3|T11|20311|10|C1-2|
-|T3|20|1|T10|46626|20|SE4|
-|T3|40|2|T10|46623|20|SE5|
-|T3|60|3|T10|46627|20|SE6|
-|T4|20|1|T11|20314|10|C2-0|
-|T4|40|2|T11|20310|10|C2-1|
-|T4|60|3|T11|20312|10|C2-2|
+|**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
+|--|--|--|--|--|--|--|--|
+|T1|20|1|T10|33482|20|SE1|*hs_t1_20_L*|
+|T1|40|2|T10|46622|20|SE2|*hs_t1_40_L*|
+|T1|60|3|T10|46625|20|SE3|*hs_t1_60_L*|
+|T2|20|1|T11|20532|10|C1-0|*hs_t2_20_L* y *ts_t2_20_L*|
+|T2|40|2|T11|20316|10|C1-1|*hs_t2_40_L* y *ts_t2_40_L*|
+|T2|60|3|T11|20311|10|C1-2|*hs_t2_60_L* y *ts_t2_60_L*|
+|T3|20|1|T10|46626|20|SE4|*hs_t3_20_L*|
+|T3|40|2|T10|46623|20|SE5|*hs_t3_40_L*|
+|T3|60|3|T10|46627|20|SE6|*hs_t3_60_L*|
+|T4|20|1|T11|20314|10|C2-0|*hs_t4_20_L* y *ts_t4_20_L*|
+|T4|40|2|T11|20310|10|C2-1|*hs_t4_40_L* y *ts_t4_40_L*|
+|T4|60|3|T11|20312|10|C2-2|*hs_t4_60_L* y *ts_t4_60_L*|
 
 <div id='id2' />
 
@@ -109,9 +109,11 @@ La descarga de datos se realiza con el programa PC400, para esto se debe acceder
 La verificación de las variables en tiempo real se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Monitor Data***, luego presionar el botón ***Add***, se abrirá una nueva ventana, en donde se debe seleccionar el tipo de variable ***Public***. Para en el cuadro derecho seleccionar específicamente las variables que se requiere monitorear.
 Es muy importante que el tipo de variable sea ***Public***, ya que estos valores se actualizan a cada 10 segundos. En la variable se identifica tanto el parámetro que miden, como el tratamiento, profundidad y variedad. A continuación, se presenta un cuadro resumen con las variables de acuerdo a las siglas con que comienzan.
 
-**Tabla 3.** Cuador para verificar valores instantáneos de variables. 
+**Tabla 3.** Cuadro para verificar valores instantáneos de variables. 
 |**Siglas**|**Parametro**|
 |--|--|
-|hs_|Humedad de suelo (Una por sensor teros10 y teros11)|
-|ts_|Temperatura de suelos (Una por sensor teros 11)|
-|mV_|Voltaje de salida (Una por sensor teros10 y teros11, en este caso, se recomienda no agragarlas)|
+|hs_|Humedad de suelo (una por sensor teros10 y teros11)|
+|ts_|Temperatura de suelo (una por sensor teros 11)|
+|mV_|Voltaje de salida (una por sensor teros10 y teros11, en este caso, se recomienda no agragarlas)|
+
+Las variables ***BattV*** y ***PTemp_C*** miden voltaje de batería y Temperatura interna del datalogger respectivamente.
