@@ -99,15 +99,22 @@ A continuación se muestran el cableado para los sensores Teros10 y Teros11.
 
 ## 4. Descaraga de datos.
 
-La descarga de datos se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Collect Data***, seleccionar las tablas: …    , y luego presionar el botón …
+La descarga de datos se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Collect Data***, seleccionar las tablas: a_HumSuel_pAlejoBar, b_Temp_pAlejoBar, c_mVolts_pAlejoBar y d_Bat_pAlejoBar. Luego presionar el botón ***Start Data Collection***.
+
+![Figura 4](images/img04.png)
 
 
 <div id='id5' />
 
 ## 5. Verificar valores instantáneos de variables.
 
-La verificación de las variables en tiempo real se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Monitor Data***, luego presionar el botón ***Add***, se abrirá una nueva ventana, en donde se debe seleccionar el tipo de variable ***Public***. Para en el cuadro derecho seleccionar específicamente las variables que se requiere monitorear.
-Es muy importante que el tipo de variable sea ***Public***, ya que estos valores se actualizan a cada 10 segundos. En la variable se identifica tanto el parámetro que miden, como el tratamiento, profundidad y variedad. A continuación, se presenta un cuadro resumen con las variables de acuerdo a las siglas con que comienzan.
+La verificación de las variables en tiempo real se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Monitor Data***, luego presionar el botón ***Add***, se abrirá una nueva ventana, en donde se debe seleccionar el tipo de variable ***Public***. En el lado derecho de la ventana seleccionar específicamente las variables que se requiere monitorear.
+Es muy importante que el tipo de variable sea ***Public***, ya que estos valores se actualizan a cada 10 segundos. En la variable se identifica tanto el parámetro que miden, como el tratamiento, profundidad y variedad.
+
+
+![Figura 5](images/img05.png)
+
+A continuación, se presenta un cuadro resumen con las variables de acuerdo a las siglas con que comienzan.
 
 **Tabla 3.** Cuadro para verificar valores instantáneos de variables. 
 |**Siglas**|**Parametro**|
