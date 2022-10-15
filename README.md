@@ -2,10 +2,11 @@
 
 ### **Índice**
 1. [Tabla de distribución de sensores.](#id1)
-2. [Configuración de direcciones SDI12 para Teros11.](#id2)
-3. [Alimentación y cableado.](#id3)
-4. [Descarga de datos.](#id4)
-5. [Verificar valores instantáneos de variables.](#id5)
+2. [Pasos para instalar una estación.](#id2)
+3. [Configuración de direcciones SDI12 para Teros11.](#id3)
+4. [Alimentación y cableado.](#id4)
+5. [Descarga de datos.](#id5)
+6. [Verificar valores instantáneos de variables.](#id6)
 
 <div id='id1' />
 
@@ -46,9 +47,26 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 |T4|40|2|T11|20310|10|C2-1|*hs_t4_40_L* y *ts_t4_40_L*|
 |T4|60|3|T11|20312|10|C2-2|*hs_t4_60_L* y *ts_t4_60_L*|
 
+
 <div id='id2' />
 
-## 2. Configuración de direcciones SDI12 para Teros11.
+## 2. Pasos para instalar una estación.
+
+Para instalar una estación se debe realizar los siguientes pasos.
+
+* Realizar la instalación en terreno de los sensores, datalogger, baterías, panel solar, gabinete y estructura.
+* Al momento de instalar los sensores, identificar en el extremo de los cables que se conectarán al datalogger el tratamiento, modelo del sensor y profundidad, además de cualquier observación que sea pertinente.
+* Luego identificar los sensores Teros11 y configurar las direcciones de acuerdo al cuadro respectivo que se presenta en la sección 1. Para configurar la dirección de los sensores Teros11 (o Teros12), seguir la guía que se presentan en la sección 3.
+* Cablear sensores de acuerdo al cuadro respectivo que se presenta en la sección 1.
+* Cablear batería, panel solar y conexión tierra y cargar programa respectivo.
+* Verificar valores instantáneos de variables según la guía que se presenta en la sección 6.
+* Esperar al menos 30 minutos y descargar datos siguiendo los pasos descritos en la sección 5.
+* Si todo esta bien, cerrar gabinete y agendar una visita en un par de días para asegurar que todo esta midiendo correctamente, en caso contrario solicitar apoyo.
+
+
+<div id='id3' />
+
+## 3. Configuración de direcciones SDI12 para Teros11.
 
 En el caso de tener múltiples sensores Teros11 o Teros12, se pueden configurar sus direcciones SDI12 para disponer de un máximo de 10 sensores por salida digital. En donde las direcciones de cada sensor deben ser configuradas desde 0 a 9 sin repetir por canal. En el caso del data CR300 se disponen de 2 canales digitales SDI12, C1 y C2, en el caso del data CR1000 se disponen de 4 canales SDI12, C1, C3, C5 y C7.
 Para configurar la dirección SDI12 del sensor, hay que asegurar que exista conexión entre el data y el computador, luego se puede utilizar la aplicación Terminar Emulator (Emulador de Terminal) que en el software PC400 se encuentra en menú ***Datalogger->Terminar Emulator***. Una vez abierta la ventana de la terminal, hacer cliks sobre el botón ***Abrir la terminal***. Si todo sale bien, la terminal responderá con el modelo de datalogger, ejem:  ***CR300>***, luego se puede seguir la siguiente secuencia de comandos y respuestas, entre la terminal y el data:
@@ -75,9 +93,9 @@ A continuación se muestran los comandos en el emulador de terminal del software
 
 **Figura 1.** Emulador de terminal, PC400. 
 
-<div id='id3' />
+<div id='id4' />
 
-## 3. Alimentación y cableado.
+## 4. Alimentación y cableado.
 
 * 1 Teros10 -> amperaje: ***12mA***, voltaje: ***3 a 15 Volts***
 * 1 Teros11 -> amperaje: ***16mA***, voltaje: ***4 a 15 Volts***
@@ -95,18 +113,18 @@ A continuación se muestran el cableado para los sensores Teros10 y Teros11.
 **Figura 3.** Cableado sensor Teros11.
 
 
-<div id='id4' />
+<div id='id5' />
 
-## 4. Descaraga de datos.
+## 5. Descaraga de datos.
 
 La descarga de datos se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Collect Data***, seleccionar las tablas: a_HumSuel_pAlejoBar, b_Temp_pAlejoBar, c_mVolts_pAlejoBar y d_Bat_pAlejoBar. Luego presionar el botón ***Start Data Collection***.
 
 ![Figura 4](images/img04.png)
 
 
-<div id='id5' />
+<div id='id6' />
 
-## 5. Verificar valores instantáneos de variables.
+## 6. Verificar valores instantáneos de variables.
 
 La verificación de las variables en tiempo real se realiza con el programa PC400, para esto se debe acceder a la pestaña ***Monitor Data***, luego presionar el botón ***Add***, se abrirá una nueva ventana, en donde se debe seleccionar el tipo de variable ***Public***. En el lado derecho de la ventana seleccionar específicamente las variables que se requiere monitorear.
 Es muy importante que el tipo de variable sea ***Public***, ya que estos valores se actualizan a cada 10 segundos. En la variable se identifica tanto el parámetro que miden, como el tratamiento, profundidad y variedad.
