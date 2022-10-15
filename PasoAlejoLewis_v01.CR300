@@ -99,7 +99,7 @@ Units ts_t4_60_L=Deg C
 '--------TABLAS--------
 'Humedades de suelo
 DataTable(a_HumSuel_pAlejoLew,True,-1)
-	DataInterval(0,60,Min,10)
+	DataInterval(0,15,Min,10)
 	Sample(1,hs_t1_20_L,FP2,False)
 	Sample(1,hs_t1_40_L,FP2,False)
 	Sample(1,hs_t1_60_L,FP2,False)
@@ -115,7 +115,7 @@ DataTable(a_HumSuel_pAlejoLew,True,-1)
 EndTable
 'Temperaturas de suelo
 DataTable(b_Temp_pAlejoLew,True,-1)
-	DataInterval(0,60,Min,10)
+	DataInterval(0,15,Min,10)
 	Average(1,ts_t2_20_L,FP2,False)
 	Average(1,ts_t2_40_L,FP2,False)
 	Average(1,ts_t2_60_L,FP2,False)
@@ -125,7 +125,7 @@ DataTable(b_Temp_pAlejoLew,True,-1)
 EndTable
 'Voltajes de salida entregados por los sensores
 DataTable(c_mVolts_pAlejoLew,True,-1)
-	DataInterval(0,60,Min,10)
+	DataInterval(0,15,Min,10)
 	Sample(1,mV_t1_20_L,FP2,False)
 	Sample(1,mV_t1_40_L,FP2,False)
 	Sample(1,mV_t1_60_L,FP2,False)
