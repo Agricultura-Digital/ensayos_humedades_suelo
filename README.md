@@ -121,6 +121,7 @@ La descarga de datos se realiza con el programa PC400, para esto se debe acceder
 
 ![Figura 4](images/img04.png)
 
+En la columna *File name* de la Figura 4 sale la ubicación y nombre de cada archivo. Para ver los datos puede arrastrar el archivo al bloc de nota abierto, o a un libro de Microsoft Excel.
 
 <div id='id6' />
 
@@ -132,6 +133,8 @@ Es muy importante que el tipo de variable sea ***Public***, ya que estos valores
 
 ![Figura 5](images/img05.png)
 
+**Figura 5.** Verificar valores instantáneos. 
+
 A continuación, se presenta un cuadro resumen con las variables de acuerdo a las siglas con que comienzan.
 
 **Tabla 3.** Cuadro para verificar valores instantáneos de variables. 
@@ -142,3 +145,18 @@ A continuación, se presenta un cuadro resumen con las variables de acuerdo a la
 |mV_|Voltaje de salida (una por sensor teros10 y teros11, en este caso, se recomienda no agragarlas)|
 
 Las variables ***BattV*** y ***PTemp_C*** miden voltaje de batería y Temperatura interna del datalogger respectivamente.
+
+<div id='id7' />
+
+## 7. Configuración de fecha y hora del datalogger y envío del programama.
+
+Para configurar la hora del data, primero se debe asegurar que existe conexión entre el data y el pc. La hora y fecha del pc deben estar correctamente configurada, si esto es asi, hacer clic en el botón ***Set Clock*** de la pestaña ***Clock/Program*** en el software PC400. Si la en el recuadro ***Clock*** la fecha-hora del datalogger y el pc son iguales, no es necesario hacer este paso.
+Para enviar el programa, en la misma pestaña ***Clock/Program*** hacer clic sobre el botón ***Send Program*** y seleccionar el programa respectivo.
+
+***IMPORTANTE!!!,… IMPORTANTE!!!***
+***CUANDO SE ENVIA UN PROGRAMA NUEVO TODOS LOS DATOS ALMACENADOS SE BORRAN, POR LO QUE SI HAY DATOS ALMACENADOS, SE DEBEN DESCARGAR ANTES DE ENVIAR EL PROGRAMA. DE LO CONTRARIO SE PERDERAN PARA SIEMPRE.***
+
+
+![Figura 6](images/img06.png)
+
+**Figura 6.** Configuración de fecha y hora del datalogger y envío del programama.
