@@ -7,6 +7,7 @@
 4. [Alimentación y cableado.](#id4)
 5. [Descarga de datos.](#id5)
 6. [Verificar valores instantáneos de variables.](#id6)
+7. [Configuración de fecha y hora del datalogger y envío del programama.](#id7)
 
 <div id='id1' />
 
@@ -54,15 +55,15 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 
 Para instalar una estación se debe realizar los siguientes pasos.
 
-* Realizar la instalación en terreno de los sensores, datalogger, baterías, panel solar, gabinete y estructura.
-* Al momento de instalar los sensores, identificar en el extremo de los cables que se conectarán al datalogger el tratamiento, modelo del sensor y profundidad, además de cualquier observación que sea pertinente.
-* Luego identificar los sensores Teros11 y configurar las direcciones de acuerdo al cuadro respectivo que se presenta en la sección 1. Para configurar la dirección de los sensores Teros11 (o Teros12), seguir la guía que se presentan en la sección 3.
-* Cablear sensores de acuerdo al cuadro respectivo que se presenta en la sección 1.
-* Cablear batería, panel solar y conexión tierra y cargar programa respectivo.
-* Verificar valores instantáneos de variables según la guía que se presenta en la sección 6.
-* Esperar al menos 30 minutos y descargar datos siguiendo los pasos descritos en la sección 5.
-* Si todo esta bien, cerrar gabinete y agendar una visita en un par de días para asegurar que todo esta midiendo correctamente, en caso contrario solicitar apoyo.
-
+1. **Instalación en terreno:** Realizar la instalación en terreno de los sensores, datalogger, baterías, panel solar, gabinete y estructura.
+2. **Etiquetado de sensores:** Al momento de instalar los sensores, identificar en el extremo de los cables que se conectarán al datalogger el tratamiento, modelo del sensor y profundidad, además de cualquier observación que sea pertinente.
+3. **Asignar dirección a Teros11:** Luego identificar los sensores Teros11 y configurar las direcciones de acuerdo al cuadro respectivo que se presenta en la sección1. Para configurar la dirección de los sensores Teros11 (o Teros12), seguir la guía que se presentan en la sección 3.
+4. **Cableado de sensores:** Cablear sensores de acuerdo al cuadro respectivo que se presenta en la sección 1.
+5. **Otros cableados:** Cablear batería, panel solar y conexión tierra
+6. **Cargar programa:** Configurar el data con el cableado respectivo, para esto ver la sección7.
+7. **Revizar variables:** Verificar valores instantáneos de variables según la guía que se presenta en la sección 6.
+8. **Descargar datos:** Esperar al menos 30 minutos y descargar datos siguiendo los pasos descritos en la sección 5.
+9. **Fín:** Si todo esta bien, cerrar gabinete y agendar una visita en un par de días para asegurar que todo esta midiendo correctamente, en caso contrario solicitar apoyo.
 
 <div id='id3' />
 
