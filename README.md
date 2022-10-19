@@ -122,6 +122,8 @@ La descarga de datos se realiza con el programa PC400, para esto se debe acceder
 
 ![Figura 4](images/img04.png)
 
+**Figura 4.** Descarga de datos. 
+
 En la columna *File name* de la Figura 4 sale la ubicación y nombre de cada archivo. Para ver los datos puede arrastrar el archivo al bloc de nota abierto, o a un libro de Microsoft Excel.
 
 <div id='id6' />
