@@ -10,16 +10,16 @@ Public PTemp_C
 'Variables asitentes Teros11, Salida SDI12, dos variables digitales
 '1: Voltaje 1000 a 2500mv, 2: Temperatura de suelo
 Public Teros11_t2_20_t(2) 'Tratamiento 2, 20cm de profundidad, puerto:c1 dir:0
-Public Teros11_t4_20_t(2) 'Tratamiento 4, 20cm de profundidad, puerto:c1 dir:0
+Public Teros11_t4_20_t(2) 'Tratamiento 4, 20cm de profundidad, puerto:c2 dir:0
 
 '----------VOLTAJES---------
 'Variables asitentes Teros10, Salida analoga unica en mVolt
-Public mV_t1_20_t 'Tratamiento 1, 20cm de profundidad.
-Public mV_t1_60_t 'Tratamiento 1, 60cm de profundidad.
-Public mV_t2_60_t 'Tratamiento 2, 60cm de profundidad.
-Public mV_t3_20_t 'Tratamiento 3, 20cm de profundidad.
-Public mV_t3_60_t 'Tratamiento 3, 60cm de profundidad.
-Public mV_t4_60_t 'Tratamiento 4, 60cm de profundidad.
+Public mV_t1_20_t 'Tratamiento 1, 20cm de profundidad, SE-1.
+Public mV_t1_60_t 'Tratamiento 1, 60cm de profundidad, SE-2.
+Public mV_t2_60_t 'Tratamiento 2, 60cm de profundidad, SE-3.
+Public mV_t3_20_t 'Tratamiento 3, 20cm de profundidad, SE-4.
+Public mV_t3_60_t 'Tratamiento 3, 60cm de profundidad, SE-5.
+Public mV_t4_60_t 'Tratamiento 4, 60cm de profundidad, SE-6.
 
 'Variables asitentes Teros11, Salida digital SDI12, 1: rango 1000 a 2500mv
 Alias Teros11_t2_20_t(1) = mV_t2_20_t 'Tratamiento 2, 20cm de profundidad, SDI12 -> puerto:c1 dir:0 var:1
@@ -119,7 +119,7 @@ BeginProg
    'Genera hasta 900 mA
    'Switch 12V total 900mA
    'Consume 6 sensores Teros10: 6*12mA(consumo max) = 72mA
-   'Consume 6 sensores Teros11: 6*16mA(consumo max) = 96mA
+   'Consume 2 sensores Teros11: 2*16mA(consumo max) = 32mA
    'Consumo total: 168mV < 900mA
     SW12 (1)
     
@@ -133,28 +133,28 @@ BeginProg
 		hs_t1_20_t = 4.824E-10 * mV_t1_20_t^3 - 2.278E-6 * mV_t1_20_t^2 + 3.898E-3 * mV_t1_20_t - 2.154
 
    'Teros10: Lectura tratamiento 1, 40cm de profundidad, variedad barcelona, Trehualemu.
-   'Senal Analoga, Naranjo->SE-3, Cafe->SW12, Transparente->Tierra.
-		VoltSe(mV_t1_60_t,1,mV2500,3,True,500,50,1,0)
+   'Senal Analoga, Naranjo->SE-2, Cafe->SW12, Transparente->Tierra.
+		VoltSe(mV_t1_60_t,1,mV2500,2,True,500,50,1,0)
 		hs_t1_60_t = 4.824E-10 * mV_t1_60_t^3 - 2.278E-6 * mV_t1_60_t^2 + 3.898E-3 * mV_t1_60_t - 2.154
 
    'Teros10: Lectura tratamiento 2, 40cm de profundidad, variedad barcelona, Trehualemu.
-   'Senal Analoga, Naranjo->SE-6, Cafe->SW12, Transparente->Tierra.
-		VoltSe(mV_t2_60_t,1,mV2500,6,True,500,50,1,0)
+   'Senal Analoga, Naranjo->SE-3, Cafe->SW12, Transparente->Tierra.
+		VoltSe(mV_t2_60_t,1,mV2500,3,True,500,50,1,0)
 		hs_t2_60_t = 4.824E-10 * mV_t2_60_t^3 - 2.278E-6 * mV_t2_60_t^2 + 3.898E-3 * mV_t2_60_t - 2.154
 		
    'Teros10: Lectura tratamiento 1, 20cm de profundidad, Trehualemu.
-   'Senal Analoga, Naranjo->SE-1, Cafe->SW12, Transparente->Tierra.
-		VoltSe(mV_t3_20_t,1,mV2500,1,True,500,50,1,0)
+   'Senal Analoga, Naranjo->SE-4, Cafe->SW12, Transparente->Tierra.
+		VoltSe(mV_t3_20_t,1,mV2500,4,True,500,50,1,0)
 		hs_t3_20_t = 4.824E-10 * mV_t3_20_t^3 - 2.278E-6 * mV_t3_20_t^2 + 3.898E-3 * mV_t3_20_t - 2.154
 
    'Teros10: Lectura tratamiento 1, 40cm de profundidad, variedad barcelona, Trehualemu.
-   'Senal Analoga, Naranjo->SE-3, Cafe->SW12, Transparente->Tierra.
-		VoltSe(mV_t3_60_t,1,mV2500,3,True,500,50,1,0)
+   'Senal Analoga, Naranjo->SE-5, Cafe->SW12, Transparente->Tierra.
+		VoltSe(mV_t3_60_t,1,mV2500,5,True,500,50,1,0)
 		hs_t3_60_t = 4.824E-10 * mV_t3_60_t^3 - 2.278E-6 * mV_t3_60_t^2 + 3.898E-3 * mV_t3_60_t - 2.154
 		
    'Teros10: Lectura tratamiento 1, 40cm de profundidad, variedad barcelona, Trehualemu.
-   'Senal Analoga, Naranjo->SE-3, Cafe->SW12, Transparente->Tierra.
-		VoltSe(mV_t4_60_t,1,mV2500,3,True,500,50,1,0)
+   'Senal Analoga, Naranjo->SE-6, Cafe->SW12, Transparente->Tierra.
+		VoltSe(mV_t4_60_t,1,mV2500,6,True,500,50,1,0)
 		hs_t4_60_t = 4.824E-10 * mV_t4_60_t^3 - 2.278E-6 * mV_t4_60_t^2 + 3.898E-3 * mV_t4_60_t - 2.154
    '-------
    'Teros11: Lectura tratamiento 3, 20cm de profundidad, variedad barcelona, Trehualemu.
