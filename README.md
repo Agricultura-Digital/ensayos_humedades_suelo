@@ -31,6 +31,7 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 |T4|40|2|T11|20530|10|C2-1|*hs_t4_40_b* y *ts_t4_40_b*|
 |T4|60|3|T11|20533|10|C2-2|*hs_t4_60_b* y *ts_t4_60_b*|
 
+#
 
 **Tabla 2.** Estación Paso Alejo, Coihueco, en avellano europeo, variedad Lewis. 
 |**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
@@ -48,7 +49,7 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 |T4|40|2|T11|20310|10|C2-1|*hs_t4_40_L* y *ts_t4_40_L*|
 |T4|60|3|T11|20312|10|C2-2|*hs_t4_60_L* y *ts_t4_60_L*|
 
-**Tabla 3.** Estación Trehualemu, San Carlos, en avellano europeo. 
+**Tabla 3.** Estación Trehualemu, San Ignacio, en avellano europeo, variedad *Tonda di Giffoni*. 
 |**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
 |--|--|--|--|--|--|--|--|
 |T1|20|1|T10|35626|20|SE1|*hs_t1_20_t*|
@@ -77,6 +78,25 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 |T4|15cm - bajo planta|2|T10|---|20|SE8|*hs_t4_15p_ce*|
 |T1|05cm - bajo gotero|3|T10|---|20|SE9|*hs_t4_05g_ce*|
 |T1|05cm - bajo **NO** gotero|4|T10|---|20|SE10|*hs_t4_05ng_ce*|
+
+#
+
+**Tabla 5.** Estación AgriChie, Coihueco, en avellano europeo, variedad *Tonda di Giffoni*. 
+|**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
+|--|--|--|--|--|--|--|--|
+|T1|20|1|T10|33482|20|SE1|*hs_t1_20_L*|
+|T1|40|2|T10|46622|20|SE2|*hs_t1_40_L*|
+|T1|60|3|T10|46625|20|SE3|*hs_t1_60_L*|
+|T2|20|1|T11|20532|10|C1-0|*hs_t2_20_L* y *ts_t2_20_L*|
+|T2|40|2|T11|20316|10|C1-1|*hs_t2_40_L* y *ts_t2_40_L*|
+|T2|60|3|T11|20311|10|C1-2|*hs_t2_60_L* y *ts_t2_60_L*|
+|T3|20|1|T10|46626|20|SE4|*hs_t3_20_L*|
+|T3|40|2|T10|46623|20|SE5|*hs_t3_40_L*|
+|T3|60|3|T10|46627|20|SE6|*hs_t3_60_L*|
+|T4|20|1|T11|20314|10|C2-0|*hs_t4_20_L* y *ts_t4_20_L*|
+|T4|40|2|T11|20310|10|C2-1|*hs_t4_40_L* y *ts_t4_40_L*|
+|T4|60|3|T11|20312|10|C2-2|*hs_t4_60_L* y *ts_t4_60_L*|
+
 
 <div id='id2' />
 
