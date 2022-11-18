@@ -68,16 +68,16 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 **Tabla 4.** Estación AgriChie, Coihueco, en avellano europeo, variedad *Tonda di Giffoni*. 
 |**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
 |--|--|--|--|--|--|--|--|
-|T1|20|1|T10|45898|20|SE1|*hs_t1_20_L*|
-|T1|60|2|T10|45900|20|SE3|*hs_t1_60_L*|
-|T2|20|1|T11|20038|10|C1-0|*hs_t2_20_L* y *ts_t2_20_L*|
-|T2|40|2|T11|20588|10|C1-1|*hs_t2_40_L* y *ts_t2_40_L*|
-|T2|60|3|T11|20531|10|C1-2|*hs_t2_60_L* y *ts_t2_60_L*|
-|T3|20|1|T10|45892|20|SE4|*hs_t3_20_L*|
-|T3|60|2|T10|46897|20|SE6|*hs_t3_60_L*|
-|T4|20|1|T11|20589|10|C2-0|*hs_t4_20_L* y *ts_t4_20_L*|
-|T4|40|2|T11|20131|10|C2-1|*hs_t4_40_L* y *ts_t4_40_L*|
-|T4|60|3|T11|20529|10|C2-2|*hs_t4_60_L* y *ts_t4_60_L*|
+|T1|20|1|T10|45898|20|SE1|*hs_t1_20_ag*|
+|T1|60|2|T10|45900|20|SE3|*hs_t1_60_ag*|
+|T2|20|1|T11|20038|10|C1-0|*hs_t2_20_ag* y *ts_t2_20_ag*|
+|T2|40|2|T11|20588|10|C1-1|*hs_t2_40_ag* y *ts_t2_40_ag*|
+|T2|60|3|T11|20531|10|C1-2|*hs_t2_60_ag* y *ts_t2_60_ag*|
+|T3|20|1|T10|45892|20|SE4|*hs_t3_20_ag*|
+|T3|60|2|T10|46897|20|SE6|*hs_t3_60_ag*|
+|T4|20|1|T11|20589|10|C2-0|*hs_t4_20_ag* y *ts_t4_20_ag*|
+|T4|40|2|T11|20131|10|C2-1|*hs_t4_40_ag* y *ts_t4_40_ag*|
+|T4|60|3|T11|20529|10|C2-2|*hs_t4_60_ag* y *ts_t4_60_ag*|
 
 #
 
