@@ -65,7 +65,7 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 
 #
 
-**Tabla 4.** Estación AgriChie, Coihueco, en avellano europeo, variedad *Tonda di Giffoni*. 
+**Tabla 4.** Estación AgriChie, San Gragorio, en avellano europeo, variedad *Tonda di Giffoni*. 
 |**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR300**|**Variables Public**|
 |--|--|--|--|--|--|--|--|
 |T1|20|1|T10|45898|20|SE1|*hs_t1_20_ag*|
