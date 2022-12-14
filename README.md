@@ -8,6 +8,7 @@
 5. [Descarga de datos.](#id5)
 6. [Verificar valores instantáneos de variables.](#id6)
 7. [Configuración de fecha y hora del datalogger y envío del programama.](#id7)
+8. [Estaciones con modem.](#id8)
 
 <div id='id1' />
 
@@ -213,3 +214,14 @@ Para enviar el programa, en la misma pestaña ***Clock/Program*** hacer clic sob
 ![Figura 6](images/img06.png)
 
 **Figura 6.** Configuración de fecha y hora del datalogger y envío del programama.
+
+
+<div id='id7' />
+
+8. [Estaciones con modem.](#id8)
+
+* Estación Trehualemu.
+
+* Estación AgriChie.
+
+* Estación CE-Arroz.
