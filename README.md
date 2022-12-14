@@ -96,8 +96,8 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 |T3|15cm - bajo gotero|4|T10|---|10|SE7|*hs_t3_15g_ce*|
 |T4|05cm - bajo planta|1|T11|---|20|C4-0|*hs_t4_05p_ce* y *ts_t4_05p_ce*|
 |T4|15cm - bajo planta|2|T10|---|20|SE8|*hs_t4_15p_ce*|
-|T1|05cm - bajo gotero|3|T10|---|20|SE9|*hs_t4_05g_ce*|
-|T1|05cm - bajo **NO** gotero|4|T10|---|20|SE10|*hs_t4_05ng_ce*|
+|T4|05cm - bajo gotero|3|T10|---|20|SE9|*hs_t4_05g_ce*|
+|T4|05cm - bajo **NO** gotero|4|T10|---|20|SE10|*hs_t4_05ng_ce*|
 
 <div id='id2' />
 
