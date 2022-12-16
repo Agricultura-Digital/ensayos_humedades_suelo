@@ -218,7 +218,7 @@ Para enviar el programa, en la misma pestaña ***Clock/Program*** hacer clic sob
 
 <div id='id7' />
 
-8. [Estaciones con modem.](#id8)
+## 8. Estaciones con modem.
 
 * Estación Trehualemu.
 
