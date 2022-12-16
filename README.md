@@ -85,20 +85,20 @@ A continuación, se despliegan los cuadros con la información de los sensores i
 **Tabla 5.** Estación CE-Arroz, San Carlos, Ensayos de Arroz. 
 |**Tratamiento**|**Profundidad (cm)**|**N° serie sensor**|**Modelo sensor**|**N° de serie**|**Largo cable (m)**|**Canal CR1000x**|**Variables Public**|
 |--|--|--|--|--|--|--|--|
-|T1|05cm - bajo planta|1|T11|---|20|C1-0|*hs_t1_05p_ce* y *ts_t1_05p_ce*|
-|T1|15cm - bajo planta|2|T10|---|20|SE1|*hs_t1_15p_ce*|
-|T1|20cm - bajo gotero|3|T10|---|20|SE2|*hs_t1_20g_ce*|
-|T2|05cm - bajo planta|1|T11|---|10|C2-0|*hs_t2_05p_ce* y *ts_t2_05p_ce*|
-|T2|15cm - bajo planta|2|T10|---|10|SE3|*hs_t2_15p_ce*|
-|T2|05cm - bajo gotero|3|T10|---|10|SE4|*hs_t2_05g_ce*|
-|T3|05cm - bajo planta|1|T11|---|10|C3-0|*hs_t3_05p_ce* y *ts_t3_05p_ce*|
-|T3|15cm - bajo planta|2|T10|---|10|SE5|*hs_t3_15p_ce*|
-|T3|20cm - bajo gotero|3|T10|---|10|SE6|*hs_t3_20g_ce*|
-|T3|15cm - bajo gotero|4|T10|---|10|SE7|*hs_t3_15g_ce*|
-|T4|05cm - bajo planta|1|T11|---|20|C4-0|*hs_t4_05p_ce* y *ts_t4_05p_ce*|
-|T4|15cm - bajo planta|2|T10|---|20|SE8|*hs_t4_15p_ce*|
-|T4|05cm - bajo gotero|3|T10|---|20|SE9|*hs_t4_05g_ce*|
-|T4|05cm - bajo **NO** gotero|4|T10|---|20|SE10|*hs_t4_05ng_ce*|
+|T1|05cm - bajo planta|1|T11|---|20|C1-0|*hs_t1_05p_cea* y *ts_t1_05p_cea*|
+|T1|15cm - bajo planta|2|T10|---|20|SE1|*hs_t1_15p_cea*|
+|T1|20cm - bajo gotero|3|T10|---|20|SE2|*hs_t1_20g_cea*|
+|T2|05cm - bajo planta|1|T11|---|10|C2-0|*hs_t2_05p_cea* y *ts_t2_05p_cea*|
+|T2|15cm - bajo planta|2|T10|---|10|SE3|*hs_t2_15p_cea*|
+|T2|05cm - bajo gotero|3|T10|---|10|SE4|*hs_t2_05g_cea*|
+|T3|05cm - bajo planta|1|T11|---|10|C3-0|*hs_t3_05p_cea* y *ts_t3_05p_cea*|
+|T3|15cm - bajo planta|2|T10|---|10|SE5|*hs_t3_15p_cea*|
+|T3|20cm - bajo gotero|3|T10|---|10|SE6|*hs_t3_20g_cea*|
+|T3|15cm - bajo gotero|4|T10|---|10|SE7|*hs_t3_15g_cea*|
+|T4|05cm - bajo planta|1|T11|---|20|C4-0|*hs_t4_05p_cea* y *ts_t4_05p_cea*|
+|T4|15cm - bajo planta|2|T10|---|20|SE8|*hs_t4_15p_cea*|
+|T4|05cm - bajo gotero|3|T10|---|20|SE9|*hs_t4_05g_cea*|
+|T4|05cm - bajo **NO** gotero|4|T10|---|20|SE10|*hs_t4_05ng_cea*|
 
 <div id='id2' />
 
