@@ -216,9 +216,9 @@ Para enviar el programa, en la misma pestaña ***Clock/Program*** hacer clic sob
 **Figura 6.** Configuración de fecha y hora del datalogger y envío del programama.
 
 
-<div id='id7' />
+<div id='id8' />
 
-## 8. Estaciones con modem.
+## 8. Estaciones con módem.
 
 * Estación Trehualemu.
 
