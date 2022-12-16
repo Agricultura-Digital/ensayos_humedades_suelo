@@ -1,0 +1,249 @@
+'CR1000
+'Created by Short Cut (4.4)
+
+'--------DATALOGGER--------
+'Variables de operacion
+Public BattV
+Public PTemp_C
+
+'-----------SDI12----------
+'Variables asitentes Teros11, Salida SDI12, dos variables digitales
+'1: Voltaje 1000 a 2500mv, 2: Temperatura de suelo
+Public Teros11_t1_05p_cea(2) 'Tratamiento 1, 5cm de profundidad bajo planta, CE Arroz, puerto:c1 dir:0
+Public Teros11_t2_05p_cea(2) 'Tratamiento 2, 5cm de profundidad bajo planta, CE Arroz, puerto:c3 dir:0
+Public Teros11_t3_05p_cea(2) 'Tratamiento 3, 5cm de profundidad bajo planta, CE Arroz, puerto:c5 dir:0
+Public Teros11_t4_05p_cea(2) 'Tratamiento 4, 5cm de profundidad bajo planta, CE Arroz, puerto:c7 dir:0
+
+'----------VOLTAJES---------
+'Variables asitentes Teros10, Salida analoga unica en mVolt
+Public mV_t1_15p_cea 'Tratamiento 1, 15cm de profundidad bajo planta, CE Arroz, canal: SE1.
+Public mV_t1_20g_cea 'Tratamiento 1, 20cm de profundidad bajo goteo, CE Arroz, canal: SE2.
+Public mV_t2_15p_cea 'Tratamiento 2, 15cm de profundidad bajo planta, CE Arroz, canal: SE3.
+Public mV_t2_05g_cea 'Tratamiento 2, 05cm de profundidad bajo gotero, CE Arroz, canal: SE4.
+Public mV_t3_15p_cea 'Tratamiento 3, 15cm de profundidad bajo planta, CE Arroz, canal: SE5.
+Public mV_t3_20g_cea 'Tratamiento 3, 60cm de profundidad bajo planta, CE Arroz, canal: SE6.
+Public mV_t3_15g_cea 'Tratamiento 3, 15cm de profundidad bajo gotero, CE Arroz, canal: SE7.
+Public mV_t4_15p_cea 'Tratamiento 4, 15cm de profundidad bajo planta, CE Arroz, canal: SE8.
+Public mV_t4_05g_cea 'Tratamiento 4, 05cm de profundidad bajo gotero, CE Arroz, canal: SE9.
+Public mV_t4_05ng_cea 'Tratamiento 4, 05cm de profundidad bajo NO gotero, CE Arroz, canal: SE10.
+
+'Variables asitentes Teros11, Salida digital SDI12, 1: rango 1000 a 2500mv
+Alias Teros11_t1_05p_cea(1) = mV_t1_05p_cea 'Tratamiento 1, 05cm de profundidad bajo planta, SDI12 -> puerto:c1 dir:0 var:1
+Alias Teros11_t2_05p_cea(1) = mV_t2_05p_cea 'Tratamiento 2, 05cm de profundidad bajo planta, SDI12 -> puerto:c1 dir:1 var:1
+Alias Teros11_t3_05p_cea(1) = mV_t3_05p_cea 'Tratamiento 3, 05cm de profundidad bajo planta, SDI12 -> puerto:c3 dir:0 var:1
+Alias Teros11_t4_05p_cea(1) = mV_t4_05p_cea 'Tratamiento 4, 05cm de profundidad bajo planta, SDI12 -> puerto:c3 dir:1 var:1
+
+'-----HUMEDADES DE SUELO-----
+'Teros10. Humedades de suelo estimadas con ecuacion suelos minirales
+'(Ref, Manual teros10, pag 13(16), ecuacion 2)
+'Humedad de Suelo = 4.824E-10*mV^3 - 2.278E-6*mV^2 + 3.898E-3*mV - 2.154
+Public hs_t1_15p_cea
+Public hs_t1_20g_cea
+Public hs_t2_15p_cea
+Public hs_t2_05g_cea
+Public hs_t3_15p_cea
+Public hs_t3_20g_cea
+Public hs_t3_15g_cea
+Public hs_t4_15p_cea
+Public hs_t4_05g_cea
+Public hs_t4_05ng_cea
+'Teros11. Humedades de suelo estimadas con ecuacion suelos minirales
+'(Ref, Manual teros11, pag 18(12), ecuacion 5)
+'Humedad de Suelo = 3.879E-4*mV - 0.6956
+Public hs_t1_05p_cea
+Public hs_t2_05p_cea
+Public hs_t3_05p_cea
+Public hs_t4_05p_cea
+
+'--------TEMPERATURAS--------
+Alias Teros11_t1_05p_cea(2) = ts_t1_05p_cea 'Tratamiento 1, 05cm de profundidad bajo planta, SDI12 -> puerto:c1 dir:0 var:2
+Alias Teros11_t2_05p_cea(2) = ts_t2_05p_cea 'Tratamiento 2, 05cm de profundidad bajo planta, SDI12 -> puerto:c1 dir:1 var:2
+Alias Teros11_t3_05p_cea(2) = ts_t3_05p_cea 'Tratamiento 3, 05cm de profundidad bajo planta, SDI12 -> puerto:c3 dir:0 var:2
+Alias Teros11_t4_05p_cea(2) = ts_t4_05p_cea 'Tratamiento 4, 05cm de profundidad bajo planta, SDI12 -> puerto:c3 dir:1 var:2
+
+'--------UNIDADES--------
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units mV_t1_05p_cea=mV
+Units mV_t1_15p_cea=mV
+Units mV_t1_20g_cea=mV
+Units mV_t2_05p_cea=mV
+Units mV_t2_15p_cea=mV
+Units mV_t2_05g_cea=mV
+Units mV_t3_05p_cea=mV
+Units mV_t3_15p_cea=mV
+Units mV_t3_20g_cea=mV
+Units mV_t3_15g_cea=mV
+Units mV_t4_05p_cea=mV
+Units mV_t4_15p_cea=mV
+Units mV_t4_05g_cea=mV
+Units mV_t4_05ng_cea=mV
+
+Units hs_t1_05p_cea=m^3/m^3
+Units hs_t1_15p_cea=m^3/m^3
+Units hs_t1_20g_cea=m^3/m^3
+Units hs_t2_05p_cea=m^3/m^3
+Units hs_t2_15p_cea=m^3/m^3
+Units hs_t2_05g_cea=m^3/m^3
+Units hs_t3_05p_cea=m^3/m^3
+Units hs_t3_15p_cea=m^3/m^3
+Units hs_t3_20g_cea=m^3/m^3
+Units hs_t3_15g_cea=m^3/m^3
+Units hs_t4_05p_cea=m^3/m^3
+Units hs_t4_15p_cea=m^3/m^3
+Units hs_t4_05g_cea=m^3/m^3
+Units hs_t4_05ng_cea=m^3/m^3
+
+Units ts_t1_05p_cea=Deg C
+Units ts_t2_05p_cea=Deg C
+Units ts_t3_05p_cea=Deg C
+Units ts_t4_05p_cea=Deg C
+
+'--------TABLAS--------
+'Humedades de suelo
+DataTable(a_HumSuel_CEArroz,True,-1)
+	DataInterval(0,15,Min,10)
+	Sample(1,hs_t1_05p_cea,FP2,False)
+  Sample(1,hs_t1_15p_cea,FP2,False)
+	Sample(1,hs_t1_20g_cea,FP2,False)
+  Sample(1,hs_t2_05p_cea,FP2,False)
+  Sample(1,hs_t2_15p_cea,FP2,False)
+  Sample(1,hs_t2_05g_cea,FP2,False)
+	Sample(1,hs_t3_05p_cea,FP2,False)
+  Sample(1,hs_t3_15p_cea,FP2,False)
+	Sample(1,hs_t3_20g_cea,FP2,False)
+  Sample(1,hs_t3_15g_cea,FP2,False)
+	Sample(1,hs_t4_05p_cea,FP2,False)
+  Sample(1,hs_t4_15p_cea,FP2,False)
+	Sample(1,hs_t4_05g_cea,FP2,False)
+  Sample(1,hs_t4_05ng_cea,FP2,False)
+EndTable
+
+DataTable(b_Temp_CEArroz,True,-1)
+	DataInterval(0,15,Min,10)
+	Average(1,ts_t1_05p_cea,FP2,False)
+  Average(1,ts_t2_05p_cea,FP2,False)
+  Average(1,ts_t3_05p_cea,FP2,False)
+  Average(1,ts_t4_05p_cea,FP2,False)
+EndTable
+
+'Voltajes de salida entregados por los sensores
+DataTable(c_mVolts_CEArroz,True,-1)
+	DataInterval(0,15,Min,10)
+	Sample(1,mV_t1_05p_cea,FP2,False)
+	Sample(1,mV_t1_15p_cea,FP2,False)
+	Sample(1,mV_t1_20g_cea,FP2,False)
+	Sample(1,mV_t2_05p_cea,FP2,False)
+	Sample(1,mV_t2_15p_cea,FP2,False)
+	Sample(1,mV_t2_05g_cea,FP2,False)
+	Sample(1,mV_t3_05p_cea,FP2,False)
+	Sample(1,mV_t3_15p_cea,FP2,False)
+	Sample(1,mV_t3_20g_cea,FP2,False)
+	Sample(1,mV_t3_15g_cea,FP2,False)
+	Sample(1,mV_t4_05p_cea,FP2,False)
+	Sample(1,mV_t4_15p_cea,FP2,False)
+	Sample(1,mV_t4_05g_cea,FP2,False)
+	Sample(1,mV_t4_05ng_cea,FP2,False)
+EndTable
+
+'Voltaje de bateria
+DataTable(d_Bat_CEArroz,True,-1)
+	DataInterval(0,1440,Min,10)
+	Maximum(1,PTemp_C,FP2,False,False)
+	Minimum(1,BattV,FP2,False,False)
+EndTable
+
+'Main Program
+BeginProg
+	'Main Scan
+	Scan(10,Sec,1,0)
+   'Default CR300 Datalogger Battery Voltage measurement 'BattV'
+		Battery(BattV)
+   'Default CR300 Datalogger Processor Temperature measurement 'PTemp_C'
+		PanelTemp(PTemp_C,60)
+		
+   'Genera hasta 900 mA
+   'Salida 12V total 900mA
+   'Consume 10 sensores Teros10: 10*12mA(consumo max) = 120mA
+   'Consume 4 sensores Teros11: 4*16mA(consumo max) = 64mA
+   'Consumo total: 168mV < 900mA
+   
+   'Teros10: Lectura tratamiento 1, 15cm de profundidad bajo planta, CE Arroz, canal: SE1.
+   'Senal Analoga, Naranjo->SE-1, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t1_15p_cea,1,mV2500,1,True,500,50,1,0)
+		hs_t1_15p_cea = 4.824E-10 * mV_t1_15p_cea^3 - 2.278E-6 * mV_t1_15p_cea^2 + 3.898E-3 * mV_t1_15p_cea - 2.154
+
+   'Teros10: Lectura tratamiento 1, 20cm de profundidad bajo gotero, CE Arroz, canal: SE2.
+   'Senal Analoga, Naranjo->SE-2, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t1_20g_cea,1,mV2500,2,True,500,50,1,0)
+		hs_t1_20g_cea = 4.824E-10 * mV_t1_20g_cea^3 - 2.278E-6 * mV_t1_20g_cea^2 + 3.898E-3 * mV_t1_20g_cea - 2.154
+				
+   'Teros10: Lectura tratamiento 2, 15cm de profundidad bajo planta, CE Arroz, canal: SE3.
+   'Senal Analoga, Naranjo->SE-3, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t2_15p_cea,1,mV2500,3,True,500,50,1,0)
+		hs_t1_15p_cea = 4.824E-10 * mV_t2_15p_cea^3 - 2.278E-6 * mV_t2_15p_cea^2 + 3.898E-3 * mV_t2_15p_cea - 2.154
+
+   'Teros10: Lectura tratamiento 2, 05cm de profundidad bajo gotero, CE Arroz, canal: SE4.
+   'Senal Analoga, Naranjo->SE-4, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t2_05g_cea,1,mV2500,4,True,500,50,1,0)
+		hs_t2_05g_cea = 4.824E-10 * mV_t2_05g_cea^3 - 2.278E-6 * mV_t2_05g_cea^2 + 3.898E-3 * mV_t2_05g_cea - 2.154
+
+   'Teros10: Lectura tratamiento 3, 15cm de profundidad bajo planta, CE Arroz, canal: SE5.
+   'Senal Analoga, Naranjo->SE-5, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t3_15p_cea,1,mV2500,5,True,500,50,1,0)
+		hs_t3_15p_cea = 4.824E-10 * mV_t3_15p_cea^3 - 2.278E-6 * mV_t3_15p_cea^2 + 3.898E-3 * mV_t3_15p_cea - 2.154
+				
+   'Teros10: Lectura tratamiento 3, 20cm de profundidad bajo gotero, CE Arroz, canal: SE6.
+   'Senal Analoga, Naranjo->SE-6, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t3_20g_cea,1,mV2500,6,True,500,50,1,0)
+		hs_t3_20g_cea = 4.824E-10 * mV_t3_20g_cea^3 - 2.278E-6 * mV_t3_20g_cea^2 + 3.898E-3 * mV_t3_20g_cea - 2.154
+   
+   'Teros10: Lectura tratamiento 3, 15cm de profundidad bajo gotero, CE Arroz, canal: SE7.
+   'Senal Analoga, Naranjo->SE-7, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t3_15g_cea,1,mV2500,7,True,500,50,1,0)
+		hs_t3_15g_cea = 4.824E-10 * mV_t3_15g_cea^3 - 2.278E-6 * mV_t3_15g_cea^2 + 3.898E-3  *mV_t3_15g_cea - 2.154
+
+   'Teros10: Lectura tratamiento 4, 15cm de profundidad bajo planta, CE Arroz, canal: SE8.
+   'Senal Analoga, Naranjo->SE-8, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t4_15p_cea,1,mV2500,8,True,500,50,1,0)
+		hs_t4_15p_cea = 4.824E-10 * mV_t4_15p_cea^3 - 2.278E-6 * mV_t4_15p_cea^2 + 3.898E-3 * mV_t4_15p_cea - 2.154
+
+   'Teros10: Lectura tratamiento 4, 05cm de profundidad bajo gotero, CE Arroz, canal: SE9.
+   'Senal Analoga, Naranjo->SE-9, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t4_05g_cea,1,mV2500,9,True,500,50,1,0)
+		hs_t4_05g_cea = 4.824E-10 * mV_t4_05g_cea^3 - 2.278E-6 * mV_t4_05g_cea^2 + 3.898E-3 * mV_t4_05g_cea - 2.154
+
+   'Teros10: Lectura tratamiento 4, 05cm de profundidad bajo NO gotero, CE Arroz, canal: SE10.
+   'Senal Analoga, Naranjo->SE-10, Cafe->12V, Transparente->Tierra.
+		VoltSe(mV_t4_05ng_cea,1,mV2500,10,True,500,50,1,0)
+		hs_t4_05ng_cea = 4.824E-10 * mV_t4_05ng_cea^3 - 2.278E-6 * mV_t4_05ng_cea^2 + 3.898E-3 * mV_t4_05ng_cea - 2.154
+
+'-------
+
+   'Teros11: Lectura tratamiento 1, 05cm de profundidad bajo planta, CE Arroz, puerto: c1 dir: 0.
+   'SDI12 puerto:c1 dir:0, Naranjo->c1, Cafe->12V, Transparente->Tierra.
+		SDI12Recorder(Teros11_t1_05p_cea(),1,0,"M!",1.0,0)
+		hs_t1_05p_cea = 3.879E-4 * mV_t1_05p_cea - 0.6956
+		
+   'Teros11: Lectura tratamiento 2, 05cm de profundidad bajo planta, CE Arroz, puerto: c1 dir: 1.
+   'SDI12 puerto:c1 dir:1, Naranjo->c1, Cafe->12V, Transparente->Tierra.
+		SDI12Recorder(Teros11_t2_05p_cea(),1,1,"M!",1.0,0)
+		hs_t2_05p_cea = 3.879E-4 * mV_t2_05p_cea - 0.6956
+		
+   'Teros11: Lectura tratamiento 3, 05cm de profundidad bajo planta, CE Arroz, puerto: c3 dir: 0.
+   'SDI12 puerto:c3 dir:0, Naranjo->c2, Cafe->12V, Transparente->Tierra.
+		SDI12Recorder(Teros11_t1_05p_cea(),3,0,"M!",1.0,0)
+		hs_t3_05p_cea = 3.879E-4 * mV_t3_05p_cea - 0.6956
+		
+   'Teros11: Lectura tratamiento 4, 05cm de profundidad bajo planta, CE Arroz, puerto: c3 dir: 1.
+   'SDI12 puerto:c3 dir:1, Naranjo->c2, Cafe->12V, Transparente->Tierra.
+		SDI12Recorder(Teros11_t4_05p_cea(),3,1,"M!",1.0,0)
+		hs_t4_05p_cea = 3.879E-4 * mV_t4_05p_cea - 0.6956
+		
+	 'Grabacion de tablas
+		CallTable a_HumSuel_CEArroz
+		CallTable b_Temp_CEArroz
+		CallTable c_mVolts_CEArroz
+		CallTable d_Bat_CEArroz
+	NextScan
+EndProg
