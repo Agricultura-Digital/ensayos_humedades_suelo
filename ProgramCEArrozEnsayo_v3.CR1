@@ -181,7 +181,7 @@ BeginProg
    'Teros10: Lectura tratamiento 2, 15cm de profundidad bajo planta, CE Arroz, canal: SE3.
    'Senal Analoga, Naranjo->SE-3, Cafe->12V, Transparente->Tierra.
 		VoltSe(mV_t2_15p_cea,1,mV2500,3,True,500,50,1,0)
-		hs_t1_15p_cea = 4.824E-10 * mV_t2_15p_cea^3 - 2.278E-6 * mV_t2_15p_cea^2 + 3.898E-3 * mV_t2_15p_cea - 2.154
+		hs_t2_15p_cea = 4.824E-10 * mV_t2_15p_cea^3 - 2.278E-6 * mV_t2_15p_cea^2 + 3.898E-3 * mV_t2_15p_cea - 2.154
 
    'Teros10: Lectura tratamiento 2, 05cm de profundidad bajo gotero, CE Arroz, canal: SE4.
    'Senal Analoga, Naranjo->SE-4, Cafe->12V, Transparente->Tierra.
@@ -232,7 +232,7 @@ BeginProg
 		
    'Teros11: Lectura tratamiento 3, 05cm de profundidad bajo planta, CE Arroz, puerto: c3 dir: 0.
    'SDI12 puerto:c3 dir:0, Naranjo->c2, Cafe->12V, Transparente->Tierra.
-		SDI12Recorder(Teros11_t1_05p_cea(),1,2,"M!",1.0,0)
+		SDI12Recorder(Teros11_t3_05p_cea(),1,2,"M!",1.0,0)
 		hs_t3_05p_cea = 3.879E-4 * mV_t3_05p_cea - 0.6956
 		
    'Teros11: Lectura tratamiento 4, 05cm de profundidad bajo planta, CE Arroz, puerto: c3 dir: 1.
